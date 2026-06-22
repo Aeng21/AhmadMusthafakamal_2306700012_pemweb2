@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Geist Mono";
+    src: url("../fonts/GeistMono-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+    --text: hsl(0, 0%, 100%);
+    --background: hsl(0, 0%, 0%);
+    --background-sub: hsl(0, 0%, 49%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+body {
+    background-color: var(--background);
+    font-family: "Geist Mono";
+    min-height: 100vh;
+}
+
+/* UTILITY */
+.flex {display: flex;}
+.direction-col {flex-direction: column;}
+.justify-center {justify-content: center;}
+.item-center {align-items: center;}
+.content-center {align-content: center;}
+.text-center {text-align: center;}
+
+
+/* LOCAL */
+
+/* LOGIN */
+.login-card {
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+    border: solid 2px var(--text);
+    border-radius: 30px;
+}
+
+.login-card__card-logo {
+    flex: 1;
+    background-color: none ;
+    color: var(--text);
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 30px;
+    border-radius: 20px 0 0 20px;
+
+    position: relative;
+}
+
+.login-card__card-logo::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.9) 0%,
+        rgba(255,255,255,0.4) 25%,
+        rgba(255,255,255,0.15) 45%,
+        rgba(255,255,255,0.05) 65%,
+        transparent 80%
+    );
+
+    filter: blur(50px);
+
+    z-index: -1;
+}
+
+
+.login-card__img-logo-um {
+    width: 300px;
+    height: 300px;
+
+    position: relative;
+    z-index: 2;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,255,255,.8))
+        drop-shadow(0 0 15px rgba(255,255,255,.5))
+        drop-shadow(0 0 30px rgba(255,255,255,.3));
+    
+}
+
+.login-card__card-form {
+    flex: 1;
+    background-color: none;
+    color: var(--text);
+    font-size: 25px;
+    font-weight: bold;
+    border: solid 2px var(--text);
+    border-radius: 30px;
+
+}
+
+.login-card__form {
+    margin: 20px 10px;
+    background-color: var(--background-sub);
+    border: 2px solid var(--text);
+    border-radius: 8px;
+    font-size: 25px;
+    color: var(--text);
+    
+}
+
+.login-card__btn-form {
+    cursor: pointer;
+    width: 100px;
+    background-color: var(--text);
+    color: var(--background);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid var(--text);
+    border-radius: 100px;
+}
+

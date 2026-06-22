@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="shortcut icon" href="assets/img/logo-um.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="flex">
+        <aside id="sidebar">
+            <a class="block sidebar__link" target="main__content" href="primary.html">Dashboard</a>
+            <a class="block sidebar__link" target="main__content" href="index.html">Absensi</a>
+            <a class="block sidebar__link" target="main__content" href="form.html">Tugas</a>
+            <a class="block sidebar__link" target="main__content" href="login.html">KHS</a>
+            <a class="block sidebar__link" target="main__content" href="matkul.html">Mata Kuliah</a>
+        </aside>
+
+        <!-- HEADER -->
+        <div class="flex direction-col flex-1">
+            <header class="header flex justify-between">
+                <button id="header__btn-sidebar">☰</button>
+
+                <!-- NAVIGATION -->
+                <nav class="flex item-center justify-center gap-10">
+                    <img  class="nav__img-profil" src="assets/img/profil.png" alt="">
+                    <a class="nav__link block" href="profil.html">
+                        <button class="header__btn-nav">Profil</button>
+                    </a>
+                    <a class="nav__link block" href="login.html">
+                        <button class="header__btn-nav">Logout</button>
+                    </a>
+                </nav>
+            </header>
+
+            <!-- MAIN -->
+            <main class="flex-1">
+                    <iframe name="main__content" class="main__iframe"  src="" frameborder="0"></iframe>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const sidebarBtn = document.getElementById("header__btn-sidebar");
+        const sidebar = document.getElementById("sidebar");
+        sidebarBtn.addEventListener("click", function () {
+            sidebar.classList.toggle("hide");
+        });
+    </script>
+</body>
+
+</html>

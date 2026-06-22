@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Geist Mono";
+    src: url("../fonts/GeistMono-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+    --text: hsl(0, 0%, 100%);
+    --background: hsl(0, 0%, 0%);
+    --background-sub: hsl(0, 0%, 49%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITY */
+.container { max-width: 1800px; margin: auto;}
+.flex {display: flex;}
+.block {display: block;}
+.flex-1 {flex: 1;}
+.direction-col {flex-direction: column;}
+.item-center {align-items: center;}
+.text-center {text-align: center;}
+.justify-between {justify-content: space-between;}
+.flex-wrap {flex-wrap: wrap;}
+.grow-small { flex-grow: 1; }
+.grow-mid { flex-grow: 2; }
+
+.m-10 {margin: 10px;}
+.m-20 {margin: 20px;}
+.m-30 {margin: 30px;}
+.m-40 {margin: 40px;}
+.m-50 {margin: 50px;}
+
+.g-10 {gap: 10px;}
+.g-20 {gap: 20px;}
+.g-30 {gap: 30px;}
+.g-40 {gap: 40px;}
+.g-50 {gap: 50px;}
+
+/* GLOBAL */
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Geist Mono";
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* LOCAL */
+
+/* SIDEBAR */
+#sidebar {
+    padding: 20px;
+    background-color: none;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+    width: 200px;
+    min-height: 100vh;
+    transition: all .5s ease;
+}
+
+#sidebar.hide {
+    width: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.sidebar__link {
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+/* HEADER */
+.header {
+    background-color: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    padding: 20px;
+}
+
+#header__btn-sidebar {
+    background-color: var(--background);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 30px;
+    border: none;
+}
+
+.header__btn-nav {
+    background-color: var(--text);
+    color: var(--background);
+    cursor: pointer;
+    font-family: "Geist Mono";
+    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+    border: solid 1px var(--text);
+    border-radius: 100px;
+}
+
+/* NAVIGATION */
+.nav__img-profil {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.nav__link {
+    font-size: 15px;
+    padding: 20px;
+}
+
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.main__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
